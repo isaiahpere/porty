@@ -19,9 +19,6 @@ const Section = styled.div`
     max-width: 160px;
     margin-bottom: 0px;
   }
-
-  @media (min-width: 1024px) {
-  }
 `;
 
 const Sections = () => {

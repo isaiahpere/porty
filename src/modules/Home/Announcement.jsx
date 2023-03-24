@@ -6,6 +6,8 @@ import useWindowDimensions from "../../utils/hooks/useWindow";
 import Sun from "../../components/Sun";
 import GoldStar from "../../components/GoldStar";
 import Grid from "../../components/Grid";
+import AlienGame from "../../components/AlienGame";
+import MusicPlayer from "../../components/MusicPlayer";
 
 const Flex = styled.div`
   display: flex;
@@ -20,6 +22,10 @@ const Section = styled(Flex)`
     justify-content: flex-end;
     align-items: flex-end;
     flex: 3;
+    padding-bottom: 150px;
+  }
+  @media (min-width: 1024px) {
+    padding-bottom: 0px;
   }
 `;
 
@@ -29,6 +35,10 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     width: 451px;
     height: 450px;
+  }
+  @media (min-width: 1024px) {
+    width: 587px;
+    height: 585px;
   }
 `;
 
@@ -48,6 +58,10 @@ const InnerContainer = styled(Flex)`
     top: 62px;
     left: 24px;
     justify-content: center;
+  }
+  @media (min-width: 1024px) {
+    top: 82px;
+    left: 30px;
   }
 `;
 
@@ -72,6 +86,10 @@ const Title = styled.div`
     font-size: 40px;
     padding-bottom: 10px;
   }
+  @media (min-width: 1024px) {
+    font-size: 50px;
+    padding-bottom: 18px;
+  }
 `;
 
 const Subtitle = styled(Title)`
@@ -80,6 +98,9 @@ const Subtitle = styled(Title)`
   color: #f1ed43;
   @media (min-width: 768px) {
     font-size: 60px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 80px;
   }
 `;
 
@@ -96,6 +117,9 @@ const ImageContainer = styled(Flex)`
   @media (min-width: 768px) {
     width: 55%;
   }
+  @media (min-width: 1024px) {
+    width: 60%;
+  }
 `;
 
 const TechGuy = styled.img`
@@ -106,9 +130,13 @@ const TechGuy = styled.img`
 const Announcement = () => {
   const { width } = useWindowDimensions();
   let tablet = width && width >= 768;
+  let desktop = width && width >= 1024;
+  let largeDesktop = width && width >= 1440;
 
   return (
     <Section>
+      {largeDesktop && <MusicPlayer />}
+      {desktop && <AlienGame />}
       {tablet && (
         <>
           <Grid />

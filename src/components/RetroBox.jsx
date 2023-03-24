@@ -9,7 +9,7 @@ import styled from "styled-components/macro";
 // Light Blue -> #90c6dc
 // Light Gray -> #ebe1d8
 
-const Flex = styled.div`
+export const Flex = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,10 +33,20 @@ const Container = styled.div`
 `;
 
 const BoxHeader = styled(Flex)`
-  height: 10%;
+  height: 8%;
+  ${(props) =>
+    props.headerHeight &&
+    `
+    height: ${props.headerHeight}px;
+  `}
   width: 100%;
   justify-content: flex-start;
   background-color: #ebb436;
+  ${(props) =>
+    props.headerColor &&
+    `
+    background-color: ${props.headerColor};
+  `}
   border-bottom: 3px solid #000;
   border-radius: 6px 6px 0px 0px;
 `;
@@ -49,14 +59,29 @@ const BoxHeaderText = styled.p`
   @media (min-width: 768px) {
     font-size: 16px;
   }
+  @media (min-width: 1024px) {
+    ${(props) =>
+      props.headerTextSize &&
+      `
+    font-size: ${props.headerTextSize}px;
+  `}
+  }
 `;
 
-const RetroBox = ({ headerText, children }) => {
+const RetroBox = ({
+  headerText,
+  headerTextSize,
+  headerColor,
+  headerHeight,
+  children,
+}) => {
   return (
     <Section>
       <Container>
-        <BoxHeader>
-          <BoxHeaderText>{headerText}</BoxHeaderText>
+        <BoxHeader headerColor={headerColor} headerHeight={headerHeight}>
+          <BoxHeaderText headerTextSize={headerTextSize}>
+            {headerText}
+          </BoxHeaderText>
         </BoxHeader>
         {children}
       </Container>

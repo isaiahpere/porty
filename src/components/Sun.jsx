@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 
 const Section = styled.div`
   position: absolute;
-  top: 10%;
+  top: 0%;
   right: 14%;
 `;
 
@@ -17,7 +17,7 @@ const Image = styled.img`
   position: relative;
   z-index: 10;
   width: 140px;
-  animation: animate 3s infinite ease alternate;
+  animation: animate 2s infinite ease alternate;
 
   @keyframes animate {
     to {
@@ -28,7 +28,7 @@ const Image = styled.img`
 
 const Stars = styled.img`
   position: absolute;
-  bottom: 90%;
+  bottom: 50%;
   right: -40%;
   width: 60px;
   animation: rotate 2s infinite ease alternate;
@@ -37,6 +37,10 @@ const Stars = styled.img`
     to {
       transform: scale(1.3);
     }
+  }
+
+  @media (min-width: 1440px) {
+    width: 80px;
   }
 `;
 
