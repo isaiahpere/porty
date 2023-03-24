@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { Link } from "react-router-dom";
+import { MdOutlineClose } from "react-icons/md";
 
 //COLORS
 // Yellow -> #ebb436
@@ -35,12 +37,13 @@ const Container = styled.div`
 const BoxHeader = styled(Flex)`
   height: 8%;
   ${(props) =>
-    props.headerHeight &&
+    props.headerHeightMobile &&
     `
-    height: ${props.headerHeight}px;
+    height: ${props.headerHeightMobile}px;
   `}
   width: 100%;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   background-color: #ebb436;
   ${(props) =>
     props.headerColor &&
@@ -49,15 +52,62 @@ const BoxHeader = styled(Flex)`
   `}
   border-bottom: 3px solid #000;
   border-radius: 6px 6px 0px 0px;
+  padding: 0px 5px;
+
+  @media (min-width: 768px) {
+    ${(props) =>
+      props.headerHeightTablet &&
+      `height: ${props.headerHeightTablet}px;
+    `}
+  }
+  @media (min-width: 1024px) {
+    ${(props) =>
+      props.headerHeight &&
+      `height: ${props.headerHeight}px;
+    `}
+  }
+`;
+
+const CloseLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.8s ease;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+`;
+
+const CloseIcon = styled(MdOutlineClose)`
+  font-size: 24px;
+  color: #000;
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 38px;
+  }
 `;
 
 const BoxHeaderText = styled.p`
   padding-left: 6px;
   font-size: 12px;
+  ${(props) =>
+    props.headerTextSizeMobile &&
+    `
+    font-size: ${props.headerTextSizeMobile}px;
+  `}
   font-weight: 600;
   text-transform: uppercase;
   @media (min-width: 768px) {
     font-size: 16px;
+    ${(props) =>
+      props.headerTextSizeTablet &&
+      `
+    font-size: ${props.headerTextSizeTablet}px;
+  `}
   }
   @media (min-width: 1024px) {
     ${(props) =>
@@ -70,18 +120,37 @@ const BoxHeaderText = styled.p`
 
 const RetroBox = ({
   headerText,
-  headerTextSize,
   headerColor,
+  headerTextSizeMobile,
+  headerTextSizeTablet,
+  headerTextSize,
+  headerHeightMobile,
+  headerHeightTablet,
   headerHeight,
   children,
+  closeButton,
 }) => {
   return (
     <Section>
       <Container>
-        <BoxHeader headerColor={headerColor} headerHeight={headerHeight}>
-          <BoxHeaderText headerTextSize={headerTextSize}>
+        <BoxHeader
+          headerColor={headerColor}
+          headerHeightMobile={headerHeightMobile}
+          headerHeightTablet={headerHeightTablet}
+          headerHeight={headerHeight}
+        >
+          <BoxHeaderText
+            headerTextSizeMobile={headerTextSizeMobile}
+            headerTextSizeTablet={headerTextSizeTablet}
+            headerTextSize={headerTextSize}
+          >
             {headerText}
           </BoxHeaderText>
+          {closeButton && (
+            <CloseLink to="/">
+              <CloseIcon />
+            </CloseLink>
+          )}
         </BoxHeader>
         {children}
       </Container>

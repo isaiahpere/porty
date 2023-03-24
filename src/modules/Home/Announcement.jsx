@@ -30,13 +30,15 @@ const Section = styled(Flex)`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
+  z-index: 300;
   width: 300px;
   height: 304px;
   @media (min-width: 768px) {
     width: 451px;
     height: 450px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     width: 587px;
     height: 585px;
   }
@@ -59,7 +61,7 @@ const InnerContainer = styled(Flex)`
     left: 24px;
     justify-content: center;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     top: 82px;
     left: 30px;
   }
@@ -86,7 +88,7 @@ const Title = styled.div`
     font-size: 40px;
     padding-bottom: 10px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     font-size: 50px;
     padding-bottom: 18px;
   }
@@ -99,7 +101,7 @@ const Subtitle = styled(Title)`
   @media (min-width: 768px) {
     font-size: 60px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     font-size: 80px;
   }
 `;
@@ -117,7 +119,7 @@ const ImageContainer = styled(Flex)`
   @media (min-width: 768px) {
     width: 55%;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     width: 60%;
   }
 `;

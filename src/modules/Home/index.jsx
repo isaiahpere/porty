@@ -18,7 +18,6 @@ const Container = styled(Flex)`
   min-height: 100vh;
   padding: 15px;
   flex-direction: column;
-  /* background-color: lightblue; */
   position: relative;
   overflow-x: hidden;
 
