@@ -6,6 +6,9 @@ import RetroBox from "../../components/RetroBox";
 import BgContainer from "../../components/BgContainer";
 import Logo from "./Logo";
 import { techInfo } from "../../assets/iconInfo";
+import AnimateContainer from "../../components/AnimateContainer";
+
+// import motion has issues
 const { motion } = require("framer-motion");
 
 // framer-motion-parent
@@ -25,8 +28,6 @@ const card = {
   hidden: { opacity: 0, scale: 0.8 },
   show: { opacity: 1, scale: 1 },
 };
-
-const AnimateContainer = styled(motion.div)``;
 
 const MaxContainer = styled(Flex)`
   height: 100vh;
@@ -67,12 +68,7 @@ const ContentContainer = styled(motion.div)`
 const Tech = () => {
   return (
     <BgContainer>
-      <AnimateContainer
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ ease: "easeIn" }}
-      >
+      <AnimateContainer>
         <MaxContainer>
           <Wrapper>
             <RetroBox
