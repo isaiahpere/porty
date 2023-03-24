@@ -18,7 +18,7 @@ const Flex = styled.div`
 const Section = styled(Flex)`
   position: relative;
   @media (min-width: 768px) {
-    min-height: 90vh;
+    min-height: 100vh;
     justify-content: flex-end;
     align-items: flex-end;
     flex: 3;
@@ -83,7 +83,6 @@ const Title = styled.div`
   font-size: 28px;
   line-height: 28px;
   -webkit-text-stroke: 2px black;
-  text-shadow: -5px 0px 2px #242424;
   @media (min-width: 768px) {
     font-size: 40px;
     padding-bottom: 10px;

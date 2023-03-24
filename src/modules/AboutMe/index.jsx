@@ -4,12 +4,12 @@ import styled from "styled-components/macro";
 import RetroBox from "../../components/RetroBox";
 import { Flex } from "../../components/RetroBox";
 
-const Section = styled(Flex)`
+const Section = styled.div`
   background-color: #90c6dc;
 `;
 
 const MaxContainer = styled(Flex)`
-  min-height: 100vh;
+  height: 100vh;
   @media (min-width: 1440px) {
     max-width: 1300px;
     margin: 0 auto;
@@ -18,7 +18,8 @@ const MaxContainer = styled(Flex)`
 
 const Wrapper = styled.div`
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
+  /* margin-top: 15px; */
 `;
 
 const Container = styled.div`
@@ -76,11 +77,11 @@ const Title = styled.h2`
   color: #fff;
   font-size: 24px;
   -webkit-text-stroke: 1px black;
-  text-shadow: -3px 0px 2px #242424;
+  /* text-shadow: -3px 0px 2px #242424; */
   @media (min-width: 768px) {
     font-size: 48px;
     -webkit-text-stroke: 2px black;
-    text-shadow: -5px 0px 2px #242424;
+    /* text-shadow: -5px 0px 2px #242424; */
   }
 `;
 
