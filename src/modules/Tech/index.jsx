@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-import Contact from "../../modules/Contact";
-
 const Section = styled.div``;
 
-const ContactPage = () => {
+const Container = styled.div``;
+
+const Tech = () => {
   return (
     <Section>
-      <Contact />
+      <Container>Tech Stack Page</Container>
     </Section>
   );
 };
 
-export default ContactPage;
+export default Tech;

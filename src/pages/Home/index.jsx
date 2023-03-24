@@ -5,7 +5,7 @@ import Home from "../../modules/Home";
 
 const Section = styled.div``;
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Section>
       <Home />
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

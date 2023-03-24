@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-import Contact from "../../modules/Contact";
+import Projects from "../../modules/Projects";
 
 const Section = styled.div``;
 
-const ContactPage = () => {
+const ProjectsPage = () => {
   return (
     <Section>
-      <Contact />
+      <Projects />
     </Section>
   );
 };
 
-export default ContactPage;
+export default ProjectsPage;
