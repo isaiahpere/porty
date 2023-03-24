@@ -88,6 +88,7 @@ const StartButton = styled(Flex)`
   border: 1px solid #707070;
   border-radius: 13px;
   text-transform: uppercase;
+  cursor: not-allowed;
 `;
 
 const AlienGame = () => {
