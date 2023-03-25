@@ -29,6 +29,7 @@ const Sections = () => {
           key={item.name}
           imgSrc={`./assets/${item.name}`}
           imgAlt={item.description}
+          imgName={item.name}
           imgTitle={item.title}
           url={item.path}
         />

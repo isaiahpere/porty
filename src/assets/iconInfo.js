@@ -9,6 +9,7 @@ export const assetInfo = [
     name: "floppy.png",
     description: "floppy disk",
     title: "resume file",
+    path: "/resume",
   },
   {
     name: "contact.png",
@@ -69,4 +70,9 @@ export const techInfo = [
     title: "mongo",
     link: "https://www.mongodb.com/atlas/database",
   },
+];
+
+export const resumeInfo = [
+  { fileName: "resume.pdf", title: "fun resume", color: "#1d8ebf" },
+  { fileName: "resume_2.pdf", title: "boring resume", color: "#737270" },
 ];

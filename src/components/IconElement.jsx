@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import TitleBox from "./TitleBox";
 
 const IconContainer = styled(Link)`
+  position: relative;
+  z-index: 1;
   width: 120px;
   margin: 10px;
   transition: transform 0.3s ease-in-out;

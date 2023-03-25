@@ -43,14 +43,16 @@ const Image = styled.img`
   object-fit: cover;
   transition: transform 0.5s ease-in-out;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-
   @media (min-width: 768px) {
     width: 360px;
     height: 316px;
     margin-top: 10px;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

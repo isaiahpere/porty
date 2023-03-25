@@ -72,8 +72,10 @@ const TitleContainer = styled(Flex)`
   margin-top: 10px;
   transition: transform 0.5s ease;
 
-  &:hover {
-    transform: scale(1.1);
+  @media (min-width: 1024px) {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -108,15 +110,15 @@ const Subtitle = styled(Title)`
 const ImageContainer = styled(Flex)`
   width: 50%;
   padding-bottom: 10px;
-
   transition: transform 0.5s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 
   @media (min-width: 768px) {
     width: 55%;
+  }
+  @media (min-width: 1024px) {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   @media (min-width: 1440px) {
     width: 60%;

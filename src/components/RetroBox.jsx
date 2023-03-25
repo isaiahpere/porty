@@ -81,7 +81,7 @@ const CloseLink = styled(Link)`
 `;
 
 const CloseIcon = styled(MdOutlineClose)`
-  font-size: 24px;
+  font-size: 28px;
   color: #000;
   @media (min-width: 768px) {
     font-size: 32px;
