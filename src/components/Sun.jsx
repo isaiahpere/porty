@@ -3,7 +3,8 @@ import styled from "styled-components/macro";
 
 const Section = styled.div`
   position: absolute;
-  top: 6%;
+  /* top: 6%; */
+  top: 60px;
   right: 14%;
 `;
 

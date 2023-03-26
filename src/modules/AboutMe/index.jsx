@@ -4,6 +4,7 @@ import styled from "styled-components/macro";
 import RetroBox from "../../components/RetroBox";
 import { Flex } from "../../components/RetroBox";
 import BgContainer from "../../components/BgContainer";
+import AnimateContainer from "../../components/AnimateContainer";
 
 const MaxContainer = styled(Flex)`
   height: 100vh;
@@ -92,56 +93,59 @@ const AboutMeText = styled.p`
 const AboutMe = () => {
   return (
     <BgContainer>
-      <MaxContainer>
-        <Wrapper>
-          <RetroBox
-            headerHeightMobile={32}
-            headerHeightTablet={44}
-            headerHeight={44}
-            headerText="about me"
-            headerTextSizeMobile={16}
-            headerTextSizeTablet={22}
-            headerTextSize={28}
-            closeButton
-          >
-            <Container>
-              <ContentContainer>
-                <Left>
-                  <Image src="./assets/boy.png" />
-                </Left>
-                <Right>
-                  <Title>Howdy!</Title>
-                  <AboutMeText>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis est vitae temporibus ipsa ipsum vel. Excepturi
-                    est, doloremque officia asperiores aperiam quisquam ullam?
-                    Blanditiis iusto mollitia quisquam accusantium quis ipsum!
-                    Necessitatibus, quisquam, veritatis error assumenda odio
-                    reiciendis minus velit quae aliquid eveniet vero et
-                    molestiae repellendus nesciunt libero. Laudantium neque eos
-                    ad expedita quam magnam nulla, consequatur error aperiam
-                    velit. Totam voluptatum at voluptates iure beatae atque?
-                    Blanditiis aspernatur explicabo praesentium excepturi
-                    dolorem fugit ipsam ad, maiores sit possimus neque id
-                    deserunt quod veniam impedit fuga consequuntur, cum
-                    voluptates aliquid? Harum optio perferendis quo quae beatae
-                    rerum iste, doloribus accusamus minima maiores in eaque, aut
-                    placeat magnam animi eligendi magni atque illo assumenda
-                    ullam possimus esse pariatur? Ratione, quae repellendus.
-                    Dolores iure repudiandae ad, maiores sit possimus neque id
-                    deserunt quod veniam impedit fuga consequuntur, cum
-                    voluptates aliquid? Harum optio perferendis quo quae beatae
-                    rerum iste, doloribus accusamus minima maiores in eaque, aut
-                    placeat magnam animi eligendi magni atque illo assumenda
-                    ullam possimus esse pariatur? Ratione, quae repellendus.
-                    Dolores iure repudiandae
-                  </AboutMeText>
-                </Right>
-              </ContentContainer>
-            </Container>
-          </RetroBox>
-        </Wrapper>
-      </MaxContainer>
+      <AnimateContainer>
+        <MaxContainer>
+          <Wrapper>
+            <RetroBox
+              headerHeightMobile={32}
+              headerHeightTablet={44}
+              headerHeight={44}
+              headerText="about me"
+              headerTextSizeMobile={16}
+              headerTextSizeTablet={22}
+              headerTextSize={28}
+              closeButton
+            >
+              <Container>
+                <ContentContainer>
+                  <Left>
+                    <Image src="./assets/boy.png" />
+                  </Left>
+                  <Right>
+                    <Title>Howdy!</Title>
+                    <AboutMeText>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis est vitae temporibus ipsa ipsum vel.
+                      Excepturi est, doloremque officia asperiores aperiam
+                      quisquam ullam? Blanditiis iusto mollitia quisquam
+                      accusantium quis ipsum! Necessitatibus, quisquam,
+                      veritatis error assumenda odio reiciendis minus velit quae
+                      aliquid eveniet vero et molestiae repellendus nesciunt
+                      libero. Laudantium neque eos ad expedita quam magnam
+                      nulla, consequatur error aperiam velit. Totam voluptatum
+                      at voluptates iure beatae atque? Blanditiis aspernatur
+                      explicabo praesentium excepturi dolorem fugit ipsam ad,
+                      maiores sit possimus neque id deserunt quod veniam impedit
+                      fuga consequuntur, cum voluptates aliquid? Harum optio
+                      perferendis quo quae beatae rerum iste, doloribus
+                      accusamus minima maiores in eaque, aut placeat magnam
+                      animi eligendi magni atque illo assumenda ullam possimus
+                      esse pariatur? Ratione, quae repellendus. Dolores iure
+                      repudiandae ad, maiores sit possimus neque id deserunt
+                      quod veniam impedit fuga consequuntur, cum voluptates
+                      aliquid? Harum optio perferendis quo quae beatae rerum
+                      iste, doloribus accusamus minima maiores in eaque, aut
+                      placeat magnam animi eligendi magni atque illo assumenda
+                      ullam possimus esse pariatur? Ratione, quae repellendus.
+                      Dolores iure repudiandae
+                    </AboutMeText>
+                  </Right>
+                </ContentContainer>
+              </Container>
+            </RetroBox>
+          </Wrapper>
+        </MaxContainer>
+      </AnimateContainer>
     </BgContainer>
   );
 };

@@ -87,7 +87,7 @@ const CloseIcon = styled(MdOutlineClose)`
     font-size: 32px;
   }
   @media (min-width: 1024px) {
-    font-size: 38px;
+    font-size: 46px;
   }
 `;
 
