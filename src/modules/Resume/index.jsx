@@ -37,7 +37,7 @@ const Text = styled.p`
   font-weight: 400;
   margin-bottom: 18px;
   @media (min-width: 768px) {
-    font-size: 30px;
+    font-size: 34px;
   }
 `;
 
@@ -47,7 +47,7 @@ const Boldy = styled.span`
   text-underline-offset: 2px;
   text-decoration: underline;
   @media (min-width: 768px) {
-    font-size: 30px;
+    font-size: 36px;
   }
 `;
 

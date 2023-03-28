@@ -18,7 +18,7 @@ const Contact = () => {
       <AnimateContainer>
         <MaxContainer>
           <Chat />
-          {/* <ContactForm /> */}
+          <ContactForm />
         </MaxContainer>
       </AnimateContainer>
     </BgContainer>

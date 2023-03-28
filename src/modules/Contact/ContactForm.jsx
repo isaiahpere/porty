@@ -13,7 +13,7 @@ const MainContainer = styled(Flex)`
 `;
 
 const Wrapper = styled.div`
-  /* width: 340px;
+  width: 340px;
 
   @media (min-width: 540px) {
     width: 500px;
@@ -23,17 +23,19 @@ const Wrapper = styled.div`
   }
   @media (min-width: 1024px) {
     width: 900px;
-  } */
+  }
 `;
 
 const Container = styled.div`
   width: 100%;
   height: calc(100% - 46px); // minus header height
-  padding: 20px;
+  padding: 14px;
+  @media (min-width: 1024px) {
+    padding: 20px;
+  }
 `;
 
 const ContentContainer = styled(Flex)`
-  padding: 10px;
   border-radius: 20px;
   flex-direction: column;
 `;
@@ -47,26 +49,33 @@ const Form = styled.form`
 `;
 
 const FormInput = styled.input`
-  height: 60px;
-  width: 70%;
+  width: 100%;
+  height: 40px;
   margin-bottom: 16px;
   border-radius: 33px;
-  border: 2px solid #000;
+  border: 3px solid #000;
   padding: 0px 20px;
   ${(props) =>
     props.invalid &&
     `
     border: 3px dashed red;
   `}
+  @media (min-width: 768px) {
+    height: 60px;
+    width: 80%;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const FormMessage = styled.textarea`
   resize: vertical;
-  width: 70%;
+  width: 100%;
   min-height: 200px;
   max-height: 400px;
+  border: 3px solid #000;
   border-radius: 33px;
-  border: 2px solid #000;
   padding: 10px 20px 0 20px;
   margin-bottom: 24px;
   ${(props) =>
@@ -79,15 +88,25 @@ const FormMessage = styled.textarea`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const FormButton = styled.button`
-  width: 300px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 33px;
-  border: 2px solid #000;
+  border: 3px solid #000;
   background-color: #eb6134;
   color: white;
-  font-size: 30px;
+  font-size: 26px;
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
   ${(props) =>
@@ -96,7 +115,12 @@ const FormButton = styled.button`
     background-color: grey;
     cursor: not-allowed;
   `}
+  @media (min-width: 768px) {
+    height: 60px;
+  }
   @media (min-width: 1024px) {
+    font-size: 30px;
+    width: 300px;
     &:hover {
       ${(props) =>
         !props.invalid &&
@@ -118,8 +142,9 @@ const ContactForm = () => {
   // ref
   const contactForm = useRef();
 
-  let isValidForm =
+  let isFormInvalid =
     fullName.length < 3 ||
+    email.length < 1 ||
     emailInvalid ||
     company.length < 3 ||
     message.length < 20;
@@ -136,13 +161,7 @@ const ContactForm = () => {
   const handleForm = (event) => {
     event.preventDefault();
 
-    if (
-      fullName.length < 3 ||
-      emailInvalid ||
-      company.length < 3 ||
-      message.length < 20
-    )
-      return;
+    if (isFormInvalid) return;
 
     console.log("attempting to send email");
     emailjs
@@ -216,9 +235,9 @@ const ContactForm = () => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={10}
-                  invalid={message.length >= 1 && message.length < 3}
+                  invalid={message.length >= 1 && message.length < 20}
                 />
-                <FormButton type="submit" invalid={isValidForm}>
+                <FormButton type="submit" invalid={isFormInvalid}>
                   SEND
                 </FormButton>
               </Form>

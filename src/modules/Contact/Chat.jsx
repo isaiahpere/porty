@@ -46,7 +46,7 @@ const ContentContainer = styled.div`
 const WriteContainer = styled(Link)`
   display: flex;
   gap: 10px;
-  height: 30px;
+  height: 40px;
   margin-top: 14px;
   cursor: pointer;
   @media (min-width: 1024px) {
@@ -71,6 +71,9 @@ const SentButton = styled(Flex)`
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
   @media (min-width: 1024px) {
     font-size: 30px;
   }
@@ -124,7 +127,7 @@ const Chat = () => {
                 duration={900}
               >
                 <TextBox />
-                <SentButton>Sent</SentButton>
+                <SentButton>send</SentButton>
               </WriteContainer>
             </ContentContainer>
           </Container>

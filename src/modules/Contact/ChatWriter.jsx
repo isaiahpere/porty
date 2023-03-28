@@ -26,6 +26,7 @@ const Image = styled.img`
 const Text = styled(Flex)`
   justify-content: flex-start;
   width: 180px;
+  min-height: 38px;
   padding: 4px 10px;
   font-size: 12px;
   font-weight: 500;
@@ -40,7 +41,6 @@ const Text = styled(Flex)`
   }
   @media (min-width: 1024px) {
     width: 430px;
-    height: 40px;
     padding: 0px 20px;
     font-size: 18px;
   }
