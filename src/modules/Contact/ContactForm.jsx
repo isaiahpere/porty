@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components/macro";
+import validator from "validator";
+import { toast } from "react-hot-toast";
 
 import RetroBox from "../../components/RetroBox";
 import { Flex } from "../../components/RetroBox";
@@ -10,8 +13,17 @@ const MainContainer = styled(Flex)`
 `;
 
 const Wrapper = styled.div`
-  width: 70vw;
-  height: 80vh;
+  /* width: 340px;
+
+  @media (min-width: 540px) {
+    width: 500px;
+  }
+  @media (min-width: 768px) {
+    width: 700px;
+  }
+  @media (min-width: 1024px) {
+    width: 900px;
+  } */
 `;
 
 const Container = styled.div`
@@ -21,79 +33,151 @@ const Container = styled.div`
 `;
 
 const ContentContainer = styled(Flex)`
-  width: 100%;
-  height: 100%;
   padding: 10px;
-  background-color: #ffffff;
   border-radius: 20px;
   flex-direction: column;
 `;
 
-const Left = styled(Flex)`
-  flex: 1;
+const Form = styled.form`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
-const Image = styled.img`
-  width: 266px;
-  height: 233px;
-  object-fit: cover;
-  transition: transform 0.5s ease-in-out;
-
-  @media (min-width: 768px) {
-    width: 360px;
-    height: 316px;
-    margin-top: 10px;
-  }
-
-  @media (min-width: 1024px) {
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+const FormInput = styled.input`
+  height: 60px;
+  width: 70%;
+  margin-bottom: 16px;
+  border-radius: 33px;
+  border: 2px solid #000;
+  padding: 0px 20px;
+  ${(props) =>
+    props.invalid &&
+    `
+    border: 3px dashed red;
+  `}
 `;
 
-const Right = styled.div`
-  flex: 1;
-  overflow-y: scroll;
-  padding: 10px;
+const FormMessage = styled.textarea`
+  resize: vertical;
+  width: 70%;
+  min-height: 200px;
+  max-height: 400px;
+  border-radius: 33px;
+  border: 2px solid #000;
+  padding: 10px 20px 0 20px;
+  margin-bottom: 24px;
+  ${(props) =>
+    props.invalid &&
+    `
+    border: 3px dashed red;
+  `}
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
-  border-radius: 10px;
-
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-const Title = styled.h2`
-  font-family: "Modak", cursive;
-  color: #fff;
-  font-size: 24px;
-  -webkit-text-stroke: 1px black;
-  @media (min-width: 768px) {
-    font-size: 48px;
-    -webkit-text-stroke: 2px black;
-  }
-`;
-
-const AboutMeText = styled.p`
-  font-size: 12px;
-  font-weight: 500;
-  text-align: justify;
-  @media (min-width: 768px) {
-    font-size: 16px;
+const FormButton = styled.button`
+  width: 300px;
+  border-radius: 33px;
+  border: 2px solid #000;
+  background-color: #eb6134;
+  color: white;
+  font-size: 30px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  ${(props) =>
+    props.invalid &&
+    `
+    background-color: grey;
+    cursor: not-allowed;
+  `}
+  @media (min-width: 1024px) {
+    &:hover {
+      ${(props) =>
+        !props.invalid &&
+        `
+          background-color: #ee8c6b;
+        `}
+    }
   }
 `;
 
 const ContactForm = () => {
+  // state
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailInvalid, setEmailInvalid] = useState(false);
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+
+  // ref
+  const contactForm = useRef();
+
+  let isValidForm =
+    fullName.length < 3 ||
+    emailInvalid ||
+    company.length < 3 ||
+    message.length < 20;
+
+  // validate Email
+  const handleEmailValidation = (value) => {
+    setEmail(value);
+
+    if (validator.isEmail(value)) {
+      setEmailInvalid(false);
+    } else setEmailInvalid(true);
+  };
+
+  const handleForm = (event) => {
+    event.preventDefault();
+
+    if (
+      fullName.length < 3 ||
+      emailInvalid ||
+      company.length < 3 ||
+      message.length < 20
+    )
+      return;
+
+    console.log("attempting to send email");
+    emailjs
+      .sendForm(
+        "service_ybrcmtw",
+        "template_hzogrou",
+        contactForm.current,
+        "rleL-0XZBsgtUIwre"
+      )
+      .then(
+        (result) => {
+          // fire toast
+          toast.success("Thank you For Your Message!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    // reset values
+    setFullName("");
+    setEmail("");
+    setCompany("");
+    setMessage("");
+    setEmailInvalid(false);
+  };
+
   return (
-    <MainContainer>
+    <MainContainer id="contact-form" name="contact-form">
       <Wrapper>
         <RetroBox
           headerHeightMobile={32}
           headerHeightTablet={44}
           headerHeight={44}
-          headerText="about me"
+          headerText="contact me"
           headerTextSizeMobile={16}
           headerTextSizeTablet={22}
           headerTextSize={28}
@@ -101,36 +185,43 @@ const ContactForm = () => {
         >
           <Container>
             <ContentContainer>
-              <Left>
-                <Image src="./assets/boy.png" />
-              </Left>
-              <Right>
-                <Title>Howdy!</Title>
-                <AboutMeText>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Perspiciatis est vitae temporibus ipsa ipsum vel. Excepturi
-                  est, doloremque officia asperiores aperiam quisquam ullam?
-                  Blanditiis iusto mollitia quisquam accusantium quis ipsum!
-                  Necessitatibus, quisquam, veritatis error assumenda odio
-                  reiciendis minus velit quae aliquid eveniet vero et molestiae
-                  repellendus nesciunt libero. Laudantium neque eos ad expedita
-                  quam magnam nulla, consequatur error aperiam velit. Totam
-                  voluptatum at voluptates iure beatae atque? Blanditiis
-                  aspernatur explicabo praesentium excepturi dolorem fugit ipsam
-                  ad, maiores sit possimus neque id deserunt quod veniam impedit
-                  fuga consequuntur, cum voluptates aliquid? Harum optio
-                  perferendis quo quae beatae rerum iste, doloribus accusamus
-                  minima maiores in eaque, aut placeat magnam animi eligendi
-                  magni atque illo assumenda ullam possimus esse pariatur?
-                  Ratione, quae repellendus. Dolores iure repudiandae ad,
-                  maiores sit possimus neque id deserunt quod veniam impedit
-                  fuga consequuntur, cum voluptates aliquid? Harum optio
-                  perferendis quo quae beatae rerum iste, doloribus accusamus
-                  minima maiores in eaque, aut placeat magnam animi eligendi
-                  magni atque illo assumenda ullam possimus esse pariatur?
-                  Ratione, quae repellendus. Dolores iure repudiandae
-                </AboutMeText>
-              </Right>
+              <Form onSubmit={handleForm} ref={contactForm}>
+                <FormInput
+                  type="text"
+                  placeholder="Name"
+                  name="fullName"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  invalid={fullName.length >= 1 && fullName.length < 3}
+                />
+                <FormInput
+                  type="text"
+                  placeholder="Email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => handleEmailValidation(e.target.value)}
+                  invalid={email.length >= 1 && emailInvalid}
+                />
+                <FormInput
+                  type="text"
+                  placeholder="Company"
+                  name="company"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                  invalid={company.length >= 1 && company.length < 3}
+                />
+                <FormMessage
+                  placeholder="Message"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={10}
+                  invalid={message.length >= 1 && message.length < 3}
+                />
+                <FormButton type="submit" invalid={isValidForm}>
+                  SEND
+                </FormButton>
+              </Form>
             </ContentContainer>
           </Container>
         </RetroBox>

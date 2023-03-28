@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import HomePage from "./pages/Home";
 import ContactPage from "./pages/Contact";
@@ -10,15 +11,18 @@ import ResumePage from "./pages/Resume";
 
 const App = () => {
   return (
-    <Routes>
-      <Route index path="/" element={<HomePage />} />
-      <Route path="/contact-me" element={<ContactPage />} />
-      <Route path="/about-me" element={<AboutMePage />} />
-      <Route path="/tech" element={<TechStackPage />} />
-      <Route path="/photo" element={<PhotoPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
-      <Route path="/resume" element={<ResumePage />} />
-    </Routes>
+    <>
+      <Toaster />
+      <Routes>
+        <Route index path="/" element={<HomePage />} />
+        <Route path="/contact-me" element={<ContactPage />} />
+        <Route path="/about-me" element={<AboutMePage />} />
+        <Route path="/tech" element={<TechStackPage />} />
+        <Route path="/photo" element={<PhotoPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/resume" element={<ResumePage />} />
+      </Routes>
+    </>
   );
 };
 

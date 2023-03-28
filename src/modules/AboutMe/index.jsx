@@ -32,6 +32,10 @@ const ContentContainer = styled(Flex)`
   background-color: #ffffff;
   border-radius: 20px;
   flex-direction: column;
+  @media (min-width: 1440px) {
+    padding: 20px 40px;
+    flex-direction: row;
+  }
 `;
 
 const Left = styled(Flex)`
@@ -54,6 +58,11 @@ const Image = styled.img`
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  @media (min-width: 1440px) {
+    width: 400px;
+    height: auto;
   }
 `;
 
