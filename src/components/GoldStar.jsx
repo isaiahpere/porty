@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 
 const Section = styled.div`
   position: absolute;
-  top: 20%;
+  top: 8%;
   left: 8%;
   @media (min-width: 1024px) {
     top: 44%;
@@ -13,7 +13,7 @@ const Section = styled.div`
 const Wrapper = styled.div``;
 
 const Image = styled.img`
-  width: 200px;
+  width: 160px;
   -webkit-animation: spin 30s linear infinite;
   -moz-animation: spin 30s linear infinite;
   animation: spin 30s linear infinite;
@@ -42,7 +42,7 @@ const GoldStar = () => {
   return (
     <Section>
       <Wrapper>
-        <Image src="./assets/goldStar.png" />
+        <Image src="./assets/images/goldStar.png" />
       </Wrapper>
     </Section>
   );

@@ -27,7 +27,7 @@ const Sections = () => {
       {assetInfo.map((item) => (
         <IconElement
           key={item.name}
-          imgSrc={`./assets/${item.name}`}
+          imgSrc={`./assets/images/${item.name}`}
           imgAlt={item.description}
           imgName={item.name}
           imgTitle={item.title}

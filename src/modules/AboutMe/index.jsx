@@ -77,6 +77,9 @@ const Right = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media (min-width: 1440px) {
+    max-height: 90%;
+  }
 `;
 
 const Title = styled.h2`
@@ -90,12 +93,16 @@ const Title = styled.h2`
   }
 `;
 
-const AboutMeText = styled.p`
+const AboutMeParagraph = styled.p`
   font-size: 12px;
   font-weight: 500;
   text-align: justify;
+  margin-bottom: 16px;
   @media (min-width: 768px) {
     font-size: 16px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
   }
 `;
 
@@ -118,36 +125,47 @@ const AboutMe = () => {
               <Container>
                 <ContentContainer>
                   <Left>
-                    <Image src="./assets/boy.png" />
+                    <Image src="./assets/images/boy.png" />
                   </Left>
                   <Right>
                     <Title>Howdy!</Title>
-                    <AboutMeText>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Perspiciatis est vitae temporibus ipsa ipsum vel.
-                      Excepturi est, doloremque officia asperiores aperiam
-                      quisquam ullam? Blanditiis iusto mollitia quisquam
-                      accusantium quis ipsum! Necessitatibus, quisquam,
-                      veritatis error assumenda odio reiciendis minus velit quae
-                      aliquid eveniet vero et molestiae repellendus nesciunt
-                      libero. Laudantium neque eos ad expedita quam magnam
-                      nulla, consequatur error aperiam velit. Totam voluptatum
-                      at voluptates iure beatae atque? Blanditiis aspernatur
-                      explicabo praesentium excepturi dolorem fugit ipsam ad,
-                      maiores sit possimus neque id deserunt quod veniam impedit
-                      fuga consequuntur, cum voluptates aliquid? Harum optio
-                      perferendis quo quae beatae rerum iste, doloribus
-                      accusamus minima maiores in eaque, aut placeat magnam
-                      animi eligendi magni atque illo assumenda ullam possimus
-                      esse pariatur? Ratione, quae repellendus. Dolores iure
-                      repudiandae ad, maiores sit possimus neque id deserunt
-                      quod veniam impedit fuga consequuntur, cum voluptates
-                      aliquid? Harum optio perferendis quo quae beatae rerum
-                      iste, doloribus accusamus minima maiores in eaque, aut
-                      placeat magnam animi eligendi magni atque illo assumenda
-                      ullam possimus esse pariatur? Ratione, quae repellendus.
-                      Dolores iure repudiandae
-                    </AboutMeText>
+                    <AboutMeParagraph>
+                      I'm Isaiah Pereira, a software engineer who's passionate
+                      about creating amazing web applications! My expertise lies
+                      in React, TypeScript, Postgres, and Node.js, and I love
+                      using these technologies to build scalable, efficient, and
+                      intuitively cool looking apps.
+                    </AboutMeParagraph>
+                    <AboutMeParagraph>
+                      With React, I can create dynamic and interactive user
+                      interfaces that look great and are super easy to use.
+                      TypeScript is my go-to language for writing scalable and
+                      maintainable code that makes my apps more reliable and
+                      less error-prone.
+                    </AboutMeParagraph>
+                    <AboutMeParagraph>
+                      When it comes to backends, I love using Node.js and
+                      Postgres to build APIs that are lightning-fast and can
+                      handle high volumes of traffic with ease. I also make sure
+                      to design my databases in a way that's optimized for
+                      performance, making sure my apps can store and retrieve
+                      large amounts of data without breaking a sweat. I'm all
+                      about writing clean, modular code that's easy to maintain
+                      and scale. And, of course, I take pride in delivering
+                      top-notch software solutions that meet the needs of my
+                      clients.
+                    </AboutMeParagraph>
+                    <AboutMeParagraph>
+                      When I'm not busy working on awesome projects, you can
+                      find me indulging in my favorite hobbies. I'm an avid
+                      video gamer, and I love nothing more than immersing myself
+                      in an epic story. I also enjoy snowboarding, and going on
+                      ATV trips with my wife and our furry companion, Luke.
+                    </AboutMeParagraph>
+                    <AboutMeParagraph>
+                      Thanks for stopping by my portfolio! Let's chat about how
+                      we can work together to build something amazing.
+                    </AboutMeParagraph>
                   </Right>
                 </ContentContainer>
               </Container>

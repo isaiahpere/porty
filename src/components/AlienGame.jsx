@@ -102,9 +102,9 @@ const AlienGame = () => {
       >
         <Wrapper>
           <LeftSide>
-            <GreenBlock src="./assets/greenBlock.png" />
-            <RedBlock src="./assets/redBlock.png" />
-            <BlueBlock src="./assets/blueBlock.png" />
+            <GreenBlock src="./assets/images/greenBlock.png" />
+            <RedBlock src="./assets/images/redBlock.png" />
+            <BlueBlock src="./assets/images/blueBlock.png" />
           </LeftSide>
           <RightSide>
             <Scoreboard>

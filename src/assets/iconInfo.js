@@ -73,6 +73,37 @@ export const techInfo = [
 ];
 
 export const resumeInfo = [
-  { fileName: "resume.pdf", title: "fun resume", color: "#1d8ebf" },
-  { fileName: "resume_2.pdf", title: "boring resume", color: "#737270" },
+  {
+    fileName: "Software Engineer - Isaiah Pereira_FUN.pdf",
+    title: "fun resume",
+    color: "#1d8ebf",
+  },
+  {
+    fileName: "Software Engineer - Isaiah Pereira.pdf",
+    title: "boring resume",
+    color: "#737270",
+  },
+];
+
+export const songs = [
+  {
+    songName: "Time - Pink Floyd",
+    songLink: "https://www.youtube.com/watch?v=GG2tZNOQWAA",
+  },
+  {
+    songName: "Johnny B. Good - Chuck Berry ",
+    songLink: "https://www.youtube.com/watch?v=aKCt8ssC7cs",
+  },
+  {
+    songName: "Freebird - Lynyrd Skynyrd",
+    songLink: "https://www.youtube.com/watch?v=QxIWDmmqZzY",
+  },
+  {
+    songName: "Tennessee Whiskey - Chris Stapleton",
+    songLink: "https://www.youtube.com/watch?v=IBLruNfUqUs",
+  },
+  {
+    songName: "Somewhere Over the Rainbow - Isarel K.",
+    songLink: "https://www.youtube.com/watch?v=V1bFr2SWP1I",
+  },
 ];

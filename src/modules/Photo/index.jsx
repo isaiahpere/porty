@@ -73,7 +73,7 @@ const Photo = () => {
                     delay: 0.4,
                   }}
                 >
-                  <Image src="./assets/angry.png" />
+                  <Image src="./assets/images/angry.png" />
                 </ContentContainer>
               </Container>
             </RetroBox>

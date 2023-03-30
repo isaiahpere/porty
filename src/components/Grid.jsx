@@ -3,14 +3,14 @@ import styled from "styled-components/macro";
 
 const Section = styled.div`
   position: absolute;
-  top: 15%;
-  left: 20%;
+  top: 25%;
+  left: 15%;
 `;
 
 const Wrapper = styled.div``;
 
 const Image = styled.img`
-  width: 500px;
+  width: 700px;
   @media (min-width: 1024px) {
     width: 800px;
   }

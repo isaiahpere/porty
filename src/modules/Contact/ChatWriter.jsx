@@ -63,13 +63,13 @@ const EmojiSmall = styled.img`
 const ChatWriter = ({ text, showEmoji }) => {
   return (
     <Container>
-      <Image src="./assets/smiley.png" />
+      <Image src="./assets/images/smiley.png" />
       <Text>
         {text}
         {showEmoji && (
           <>
-            <EmojiSmall src="./assets/smileySmall.png" />
-            <EmojiSmall src="./assets/smileySmall.png" />
+            <EmojiSmall src="./assets/images/smileySmall.png" />
+            <EmojiSmall src="./assets/images/smileySmall.png" />
           </>
         )}
       </Text>

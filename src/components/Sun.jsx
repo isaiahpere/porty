@@ -4,8 +4,16 @@ import styled from "styled-components/macro";
 const Section = styled.div`
   position: absolute;
   /* top: 6%; */
-  top: 60px;
+  /* top: 60px; */
+  top: 4vh;
   right: 14%;
+  @media (min-width: 768px) {
+    top: 10vh;
+    right: 14%;
+  }
+  @media (min-width: 1024px) {
+    right: 14%;
+  }
 `;
 
 const Wrapper = styled.div``;
@@ -29,8 +37,8 @@ const Image = styled.img`
 
 const Stars = styled.img`
   position: absolute;
-  bottom: 50%;
-  right: -40%;
+  bottom: 70%;
+  left: 90%;
   width: 60px;
   animation: rotate 2s infinite ease alternate;
 
@@ -41,7 +49,7 @@ const Stars = styled.img`
   }
 
   @media (min-width: 1440px) {
-    width: 80px;
+    width: 60px;
   }
 `;
 
@@ -50,8 +58,8 @@ const Sun = () => {
     <Section>
       <Wrapper>
         <ImageContainer>
-          <Stars src="./assets/stars.png" />
-          <Image src="./assets/smiley.png" />
+          <Stars src="./assets/images/stars.png" />
+          <Image src="./assets/images/smiley.png" />
         </ImageContainer>
       </Wrapper>
     </Section>

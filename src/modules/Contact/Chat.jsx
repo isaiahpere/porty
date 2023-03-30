@@ -121,7 +121,7 @@ const Chat = () => {
               />
               <WriteContainer
                 to="contact-form"
-                // spy={true}
+                spy={true}
                 smooth={true}
                 offset={50}
                 duration={900}

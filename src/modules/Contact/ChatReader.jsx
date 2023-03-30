@@ -8,7 +8,6 @@ const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
-  /* background-color: red; */
 `;
 
 const MainTextContainer = styled.div`

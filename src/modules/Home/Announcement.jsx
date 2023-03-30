@@ -22,7 +22,7 @@ const Section = styled(Flex)`
     justify-content: flex-end;
     align-items: flex-end;
     flex: 3;
-    padding-bottom: 150px;
+    padding-bottom: 90px;
   }
   @media (min-width: 1024px) {
     padding-bottom: 0px;
@@ -37,6 +37,9 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     width: 451px;
     height: 450px;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
   }
   @media (min-width: 1440px) {
     width: 587px;
@@ -134,11 +137,10 @@ const Announcement = () => {
   const { width } = useWindowDimensions();
   let tablet = width && width >= 768;
   let desktop = width && width >= 1024;
-  let largeDesktop = width && width >= 1440;
 
   return (
     <Section>
-      {largeDesktop && <MusicPlayer />}
+      {desktop && <MusicPlayer />}
       {desktop && <AlienGame />}
       {tablet && (
         <>
@@ -155,7 +157,7 @@ const Announcement = () => {
               <Subtitle>PORTFOLIO</Subtitle>
             </TitleContainer>
             <ImageContainer>
-              <TechGuy src="./assets/pcguy.png" />
+              <TechGuy src="./assets/images/pcguy.png" />
             </ImageContainer>
           </InnerContainer>
         </RetroBox>
