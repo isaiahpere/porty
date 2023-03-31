@@ -181,7 +181,7 @@ const AboutMe = () => {
                 <ContentContainer>
                   <Left toggle={toggleSlide ? 1 : 0}>
                     <Container>
-                      <Image src="./assets/face.jpg" />
+                      <Image src="./assets/images/face.jpg" />
                     </Container>
                   </Left>
                   <Right toggle={toggleSlide ? 1 : 0}>

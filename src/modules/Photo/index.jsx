@@ -36,7 +36,6 @@ const Container = styled(Flex)`
   @media (min-width: 768px) {
     height: calc(100% - 44px); // minus header height
   }
-  /* background-color: red; */
 `;
 
 const ContentContainer = styled(motion.div)`
@@ -116,7 +115,6 @@ const Photo = () => {
                     />
                   </Video>
                   <PlayButton onClick={handleVideoPlay}>Play Me</PlayButton>
-                  {/* <Image src="./assets/images/angry.png" /> */}
                 </ContentContainer>
               </Container>
             </RetroBox>
