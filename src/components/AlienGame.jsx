@@ -76,7 +76,7 @@ const Level = styled.p`
   font-weight: 600;
 `;
 
-const StartButton = styled(Flex)`
+export const StartButton = styled(Flex)`
   width: 160px;
   height: 40px;
   font-size: 24px;

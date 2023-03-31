@@ -1,15 +1,9 @@
 export const assetInfo = [
   {
-    name: "computer.png",
-    description: "retro computer monitor and tower",
-    title: "tech stack",
-    path: "/tech",
-  },
-  {
-    name: "floppy.png",
-    description: "floppy disk",
-    title: "resume file",
-    path: "/resume",
+    name: "world.png",
+    description: "blue world with grids on it",
+    title: "about me",
+    path: "/about-me",
   },
   {
     name: "contact.png",
@@ -18,22 +12,28 @@ export const assetInfo = [
     path: "/contact-me",
   },
   {
+    name: "computer.png",
+    description: "retro computer monitor and tower",
+    title: "tech stack",
+    path: "/tech",
+  },
+  {
     name: "files.png",
     description: "yellow manilla folder with papers inside",
     title: "projects",
     path: "/projects",
   },
   {
-    name: "picture.png",
-    description: "framed smiley face",
-    title: "photo.jpg",
-    path: "/photo",
+    name: "floppy.png",
+    description: "floppy disk",
+    title: "resume file",
+    path: "/resume",
   },
   {
-    name: "world.png",
-    description: "blue world with grids on it",
-    title: "about me",
-    path: "/about-me",
+    name: "picture.png",
+    description: "framed smiley face",
+    title: "video.mp4",
+    path: "/photo",
   },
 ];
 

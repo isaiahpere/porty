@@ -20,7 +20,6 @@ export const Flex = styled.div`
 const Section = styled(Flex)`
   height: 100%;
   width: 100%;
-  background-color: lightgray;
   border-radius: 10px;
   position: relative;
 `;
@@ -119,6 +118,7 @@ const BoxHeaderText = styled.p`
 `;
 
 const RetroBox = ({
+  bgColor,
   headerText,
   headerColor,
   headerTextSizeMobile,
@@ -131,7 +131,7 @@ const RetroBox = ({
   closeButton,
 }) => {
   return (
-    <Section>
+    <Section bgColor={bgColor}>
       <Container>
         <BoxHeader
           headerColor={headerColor}

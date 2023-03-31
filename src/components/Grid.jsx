@@ -20,7 +20,7 @@ const Grid = () => {
   return (
     <Section>
       <Wrapper>
-        <Image src="./assets/grid.png" />
+        <Image src="./assets/images/grid.png" />
       </Wrapper>
     </Section>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-import { Link } from "react-router-dom";
 
 import RetroBox, { Flex } from "./RetroBox";
 import { songs } from "../assets/iconInfo";
