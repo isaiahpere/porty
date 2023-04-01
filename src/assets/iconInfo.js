@@ -110,13 +110,17 @@ export const songs = [
 
 export const projects = [
   {
-    title: "Modern Shop",
+    title: "Rimberio Clothing",
+    link: "https://github.com/isaiahpere/modernShop",
     descOne:
-      "The Modern Shop is a full-stack e-commerce site with user registration, product catalog, shopping cart, checkout process, and order management.",
+      "Rimberio is a modern full-stack e-commerce site with user registration, product catalog, shopping cart, checkout process, and order management.",
     descTwo:
       "Built with modern web tech like ReactJS, Node.js, MongoDB, and Stripe.",
-    mobileImageSrc: "./assets/projects/modernShop/mobile.png",
-    tabletImageSrc: "./assets/projects/modernShop/tablet.png",
-    desktopImageSrc: "./assets/projects/modernShop/desktop.png",
+    mobileImageSrc:
+      "https://res.cloudinary.com/filemancentral/image/upload/v1680390001/portfolio/projects/modernShop/mobile_wcs23f.jpg",
+    tabletImageSrc:
+      "https://res.cloudinary.com/filemancentral/image/upload/v1680390029/portfolio/projects/modernShop/tablet_vehnsn.jpg",
+    desktopImageSrc:
+      "https://res.cloudinary.com/filemancentral/image/upload/v1680390049/portfolio/projects/modernShop/desktop_ugs4ou.jpg",
   },
 ];

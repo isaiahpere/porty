@@ -40,11 +40,19 @@ const ProjectInfo = styled(Flex)`
   }
 `;
 
-const ProjectTitle = styled.h2`
+const ProjectTitle = styled.a`
+  color: #000;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
+  margin-bottom: 4px;
   @media (min-width: 768px) {
     font-size: 18px;
+  }
+  @media (min-width: 1024px) {
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
   }
 `;
 
@@ -69,7 +77,9 @@ const ProjectCard = ({ data }) => {
         {width < 768 && <ProjectImage src={data.mobileImageSrc} />}
       </ProjectVisual>
       <ProjectInfo>
-        <ProjectTitle>{data.title}</ProjectTitle>
+        <ProjectTitle href={data.link} target="_blank">
+          {data.title}
+        </ProjectTitle>
         <ProjectText>{data.descOne}</ProjectText>
         <ProjectText>{data.descTwo}</ProjectText>
       </ProjectInfo>

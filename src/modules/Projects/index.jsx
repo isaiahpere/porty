@@ -33,6 +33,10 @@ const Wrapper = styled.div`
     width: 540px;
     height: 700px;
   }
+  @media (min-width: 1024px) {
+    width: 700px;
+    height: 700px;
+  }
 `;
 
 const Container = styled(Flex)`
