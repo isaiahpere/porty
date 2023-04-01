@@ -115,8 +115,8 @@ export const projects = [
       "The Modern Shop is a full-stack e-commerce site with user registration, product catalog, shopping cart, checkout process, and order management.",
     descTwo:
       "Built with modern web tech like ReactJS, Node.js, MongoDB, and Stripe.",
-    mobileImageSrc: "./assets/projects/modernShop/modernShopMobile.png",
-    tabletImageSrc: "./assets/projects/modernShop/modernShopTablet.png",
-    desktopImageSrc: "./assets/projects/modernShop/modernShopDesktop.png",
+    mobileImageSrc: "./assets/projects/modernShop/mobile.png",
+    tabletImageSrc: "./assets/projects/modernShop/tablet.png",
+    desktopImageSrc: "./assets/projects/modernShop/desktop.png",
   },
 ];

@@ -32,7 +32,6 @@ const ProjectInfo = styled(Flex)`
   max-height: 30%;
   font-size: 10px;
   margin-top: 10px;
-  box-shadow: 2px 6px 43px -22px rgba(0, 0, 0, 0.93);
   background-color: #fff;
   padding: 10px;
   border-radius: 6px;
@@ -55,21 +54,15 @@ const ProjectText = styled.p`
 
 const ProjectCard = ({ data }) => {
   const { width } = useWindowDimensions();
-  let mobile = width && width < 768;
-  let tablet = width && width >= 768 && width < 1024;
 
   return (
     <>
       <ProjectVisual>
-        <ProjectImage
-          src={
-            mobile
-              ? data.mobileImageSrc
-              : tablet
-              ? data.tabletImageSrc
-              : data.desktopImageSrc
-          }
-        />
+        {width >= 1024 && <ProjectImage src={data.desktopImageSrc} />}
+        {width >= 768 && width < 1024 && (
+          <ProjectImage src={data.tabletImageSrc} />
+        )}
+        {width < 768 && <ProjectImage src={data.mobileImageSrc} />}
       </ProjectVisual>
       <ProjectInfo>
         <ProjectTitle>{data.title}</ProjectTitle>
