@@ -30,14 +30,12 @@ const ProjectInfo = styled(Flex)`
   flex-direction: column;
   align-items: flex-start;
   max-height: 30%;
-  font-size: 10px;
   margin-top: 10px;
   background-color: #fff;
   padding: 10px;
   border-radius: 6px;
   @media (min-width: 768px) {
     height: 160px;
-    letter-spacing: 0.8px;
     padding: 10px 16px;
   }
 `;
@@ -45,11 +43,17 @@ const ProjectInfo = styled(Flex)`
 const ProjectTitle = styled.h2`
   font-size: 14px;
   font-weight: 500;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const ProjectText = styled.p`
   font-size: 10px;
   margin-bottom: 5px;
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const ProjectCard = ({ data }) => {
