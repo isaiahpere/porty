@@ -142,7 +142,7 @@ const AboutMeParagraph = styled.p`
   }
 `;
 
-const Arrow = styled(AiOutlineArrowRight)`
+export const Arrow = styled(AiOutlineArrowRight)`
   width: 30px;
   height: 30px;
   transition: transform 0.8s ease;

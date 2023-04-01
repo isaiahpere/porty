@@ -48,7 +48,8 @@ const ContentContainer = styled(motion.div)`
 `;
 
 const Video = styled.video`
-  border: 3px solid #000;
+  background-color: #90c6dc;
+  ''border: 3px solid #000;
   border-radius: 13px;
   cursor: pointer;
   width: 80%;
@@ -60,17 +61,6 @@ const PlayButton = styled(StartButton)`
   border: 2px solid #000;
   color: #fff;
   cursor: pointer;
-`;
-
-const Image = styled.img`
-  width: 300px;
-
-  @media (min-width: 415px) {
-    width: 360px;
-  }
-  @media (min-width: 768px) {
-    width: 550px;
-  }
 `;
 
 const Photo = () => {
@@ -104,11 +94,7 @@ const Photo = () => {
                     delay: 0.4,
                   }}
                 >
-                  <Video
-                    ref={VideoRef}
-                    preload="no"
-                    onClick={(e) => e.target.play()}
-                  >
+                  <Video ref={VideoRef} onClick={(e) => e.target.play()}>
                     <source
                       src="./assets/video/thankyou.mp4"
                       type="video/mp4"

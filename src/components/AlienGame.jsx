@@ -28,6 +28,7 @@ const LeftSide = styled.div`
   position: relative;
   flex: 1;
   background-color: #f3cfff;
+  overflow: hidden;
 `;
 
 const RedBlock = styled.img`
@@ -38,10 +39,21 @@ const RedBlock = styled.img`
   height: 25px;
 `;
 
+const RedBlockTwo = styled(RedBlock)`
+  top: 50%;
+  left: 40%;
+`;
+
 const BlueBlock = styled(RedBlock)`
   bottom: 12%;
   right: 15%;
   width: 60px;
+`;
+
+const BlueBlockTwo = styled(BlueBlock)`
+  top: -1%;
+  left: 2%;
+  transform: rotate(90deg);
 `;
 
 const GreenBlock = styled(RedBlock)`
@@ -49,6 +61,12 @@ const GreenBlock = styled(RedBlock)`
   left: 10%;
   width: 15px;
   height: 45px;
+`;
+
+const GreenBlockTwo = styled(GreenBlock)`
+  top: 15%;
+  left: 60%;
+  transform: rotate(90deg);
 `;
 
 const RightSide = styled(Flex)`
@@ -103,8 +121,11 @@ const AlienGame = () => {
         <Wrapper>
           <LeftSide>
             <GreenBlock src="./assets/images/greenBlock.png" />
+            <GreenBlockTwo src="./assets/images/greenBlock.png" />
             <RedBlock src="./assets/images/redBlock.png" />
+            <RedBlockTwo src="./assets/images/redBlock.png" />
             <BlueBlock src="./assets/images/blueBlock.png" />
+            <BlueBlockTwo src="./assets/images/blueBlock.png" />
           </LeftSide>
           <RightSide>
             <Scoreboard>

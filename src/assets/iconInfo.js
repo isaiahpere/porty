@@ -107,3 +107,16 @@ export const songs = [
     songLink: "https://www.youtube.com/watch?v=V1bFr2SWP1I",
   },
 ];
+
+export const projects = [
+  {
+    title: "Modern Shop",
+    descOne:
+      "The Modern Shop is a full-stack e-commerce site with user registration, product catalog, shopping cart, checkout process, and order management.",
+    descTwo:
+      "Built with modern web tech like ReactJS, Node.js, MongoDB, and Stripe.",
+    mobileImageSrc: "./assets/projects/modernShop/modernShopMobile.png",
+    tabletImageSrc: "./assets/projects/modernShop/modernShopTablet.png",
+    desktopImageSrc: "./assets/projects/modernShop/modernShopDesktop.png",
+  },
+];
