@@ -32,6 +32,7 @@ const ProjectInfo = styled(Flex)`
   max-height: 30%;
   font-size: 10px;
   margin-top: 10px;
+  box-shadow: 2px 6px 43px -22px rgba(0, 0, 0, 0.93);
   background-color: #fff;
   padding: 10px;
   border-radius: 6px;
