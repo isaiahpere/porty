@@ -74,12 +74,12 @@ export const techInfo = [
 
 export const resumeInfo = [
   {
-    fileName: "Software Engineer - Isaiah Pereira_FUN.pdf",
+    fileName: "IsaiahPereira_Resume_.pdf",
     title: "fun resume",
     color: "#1d8ebf",
   },
   {
-    fileName: "Software Engineer - Isaiah Pereira.pdf",
+    fileName: "IsaiahPereira_Resume.pdf",
     title: "boring resume",
     color: "#737270",
   },
