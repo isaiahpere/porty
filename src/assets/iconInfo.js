@@ -117,10 +117,10 @@ export const projects = [
     descTwo:
       "Built with modern web tech like ReactJS, Node.js, MongoDB, and Stripe.",
     mobileImageSrc:
-      "https://res.cloudinary.com/filemancentral/image/upload/v1680390001/portfolio/projects/modernShop/mobile_wcs23f.jpg",
+      "https://res.cloudinary.com/filemancentral/image/upload/v1681082850/mobile_rimick.png",
     tabletImageSrc:
-      "https://res.cloudinary.com/filemancentral/image/upload/v1680390029/portfolio/projects/modernShop/tablet_vehnsn.jpg",
+      "https://res.cloudinary.com/filemancentral/image/upload/v1681082644/tablet_ptmpgw.png",
     desktopImageSrc:
-      "https://res.cloudinary.com/filemancentral/image/upload/v1680390049/portfolio/projects/modernShop/desktop_ugs4ou.jpg",
+      "https://res.cloudinary.com/filemancentral/image/upload/v1681082682/desktop_vos6uq.jpg",
   },
 ];
