@@ -110,17 +110,31 @@ export const songs = [
 
 export const projects = [
   {
-    title: "Rimberio Clothing",
+    title: "Rimberio",
     link: "https://github.com/isaiahpere/modernShop",
     descOne:
-      "Rimberio is a modern full-stack e-commerce site with user registration, product catalog, shopping cart, checkout process, and order management.",
+      "An e-commerce website that is a fully functional online store to provide a convenient and secure way for users to shop online. It includes features such as a shopping cart, checkout process, user account creation as well as an intuitive admin dashboard for managing products, orders, and customers.",
     descTwo:
-      "Built with modern web tech like ReactJS, Node.js, MongoDB, and Stripe.",
+      "The backend is powered by Strapi CMS. MongoDB was the choice for the data store. On the client side, we have React and styled-components working together to create create elegant UI.",
     mobileImageSrc:
       "https://res.cloudinary.com/filemancentral/image/upload/v1681082850/mobile_rimick.png",
     tabletImageSrc:
       "https://res.cloudinary.com/filemancentral/image/upload/v1681082644/tablet_ptmpgw.png",
     desktopImageSrc:
       "https://res.cloudinary.com/filemancentral/image/upload/v1681082682/desktop_vos6uq.jpg",
+  },
+  {
+    title: "Aircnc",
+    link: "https://aircncproject.com/",
+    descOne:
+      "This project is a clone of the popular vacation rental platform, Airbnb. It is a web-based application that allows users to search for and book vacation rentals, as well as list their own properties for rent.",
+    descTwo:
+      "This Airbnb clone project was built with Node.js and Express.js for the backend, providing a reliable and scalable server environment. MongoDB was used as the data store to allow for efficient and flexible data management. The client side was built with React, providing a responsive and user-friendly interface for browsing and booking properties.",
+    mobileImageSrc:
+      "https://res.cloudinary.com/filemancentral/image/upload/v1682271396/portfolio/aircnc/aircncTablet_e858bh.png",
+    tabletImageSrc:
+      "https://res.cloudinary.com/filemancentral/image/upload/v1682271396/portfolio/aircnc/aircncTablet_e858bh.png",
+    desktopImageSrc:
+      "https://res.cloudinary.com/filemancentral/image/upload/v1682271389/portfolio/aircnc/aircncDesktop_jsuxnl.png",
   },
 ];

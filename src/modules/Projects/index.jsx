@@ -20,22 +20,18 @@ const MaxContainer = styled(Flex)`
 
 const Wrapper = styled.div`
   width: 360px;
-  height: 80%;
+  height: 560px;
   @media (min-width: 390px) {
     width: 375px;
-    height: 70%;
-  }
-  @media (min-width: 415px) {
-    width: 375px;
-    height: 70%;
+    height: 650px;
   }
   @media (min-width: 768px) {
     width: 540px;
-    height: 700px;
+    height: 850px;
   }
   @media (min-width: 1024px) {
     width: 700px;
-    height: 700px;
+    height: 850px;
   }
 `;
 
