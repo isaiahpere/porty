@@ -73,14 +73,14 @@ export const techInfo = [
 ];
 
 export const resumeInfo = [
-  {
-    fileName: "IsaiahPereira_Resume_.pdf",
-    title: "fun resume",
-    color: "#1d8ebf",
-  },
+  // {
+  //   fileName: "IsaiahPereira_Resume_.pdf",
+  //   title: "fun resume",
+  //   color: "#1d8ebf",
+  // },
   {
     fileName: "IsaiahPereira_Resume.pdf",
-    title: "boring resume",
+    title: "Download Resume",
     color: "#737270",
   },
 ];
