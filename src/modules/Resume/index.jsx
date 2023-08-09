@@ -100,7 +100,7 @@ const Resume = () => {
                 >
                   <Container>
                     <Text>
-                      Download the <Boldy>Isaiah's</Boldy> resume?
+                      Download <Boldy>Isaiah's</Boldy> resume!
                     </Text>
                     <DownloadButton
                       href={`./assets/resume/${item.fileName}`}
