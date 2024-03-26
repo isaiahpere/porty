@@ -79,7 +79,7 @@ export const resumeInfo = [
   //   color: "#1d8ebf",
   // },
   {
-    fileName: "IsaiahPereira_Resume.pdf",
+    fileName: "IsaiahPereira.pdf",
     title: "Download Resume",
     color: "#737270",
   },

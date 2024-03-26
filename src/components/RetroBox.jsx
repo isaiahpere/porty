@@ -18,10 +18,11 @@ export const Flex = styled.div`
 `;
 
 const Section = styled(Flex)`
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   border-radius: 10px;
   position: relative;
+  ${(props) => (props.height ? `height: ${props.height}px;` : `height: 100%;`)}
 `;
 
 const Container = styled.div`
@@ -129,9 +130,10 @@ const RetroBox = ({
   headerHeight,
   children,
   closeButton,
+  height,
 }) => {
   return (
-    <Section bgColor={bgColor}>
+    <Section bgColor={bgColor} height={height}>
       <Container>
         <BoxHeader
           headerColor={headerColor}
